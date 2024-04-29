@@ -6,16 +6,12 @@ Custom, authenticated API instructions and starter pack for BEW 1.3 students!
 
 ## Installation
 
-1. Fork this repository and clone your fork locally.
-1. Open the repository folder in your editor of choice:
-
-    ```bash
-    $ cd auth-api-starterpack
-    $ atom .
-    ```
-
-1. Run `npm install` to install project dependencies into the activated environment.
-1. Execute `npm start` to run the development server.
+#### To run locally, clone the repository and open the project in your editor
+* In the project directory, you can run:
+#### 'npm install'
+* Installs node modules
+#### 'npm start'
+* Runs the server in development mode on http://localhost:3000
 
 
 ## Routes
