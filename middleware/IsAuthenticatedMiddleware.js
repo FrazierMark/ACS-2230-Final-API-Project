@@ -6,7 +6,7 @@ module.exports = {
     const authHeader = req.headers['authorization'];
 
     // IF no auth headers are provided
-    // return 401 Unauthorized error
+    // THEN return 401 Unauthorized error
     if (!authHeader) {
       return res.status(401).json({
         status: false,
@@ -17,7 +17,7 @@ module.exports = {
     }
 
     // IF bearer auth header is not provided
-    // return 401 Unauthorized error
+    // THEN return 401 Unauthorized error
     if (!authHeader.startsWith('Bearer')) {
       return res.status(401).json({
         status: false,
@@ -30,7 +30,7 @@ module.exports = {
     const token = authHeader.split(' ')[1];
 
     // IF bearer auth header is provided, but token is not provided
-    // return 401 Unauthorized error
+    // THEN return 401 Unauthorized error
     if (!token) {
       return res.status(401).json({
         status: false,
@@ -48,7 +48,7 @@ module.exports = {
         });
       }
 
-      req.user = user;
+      req.user = user; // Save the user object for further use
       next();
     });
   }

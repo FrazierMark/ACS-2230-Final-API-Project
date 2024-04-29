@@ -1,4 +1,4 @@
-const UserModel = require("./../../models/User");
+const UserModel = require("../models/User");
 
 module.exports = {
   getUser: (req, res) => {
@@ -28,7 +28,7 @@ module.exports = {
     } = req;
 
     // IF the payload does not have any keys,
-    // we can return an error, as nothing can be updated
+    // THEN we can return an error, as nothing can be updated
     if (!Object.keys(payload).length) {
       return res.status(400).json({
         status: false,

@@ -18,6 +18,7 @@ module.exports = {
 
     return (req, res, next) => {
       const { body } = req;
+      console.log(body)
       const ajv = new Ajv(AJV_OPTS);
       const validate = ajv.compile(schema);
       const isValid = validate(body);

@@ -1,48 +1,36 @@
-# E-Commerce Store with NodeJS
+# 🔐 auth-api-starterpack
 
-This is an Express service that provides authorization functionality and includes separate folders for users and products.
-It also uses Sequelize ORM with SQLite as the database, along with the JSON Web Token (JWT) and AJV libraries.
+[![GitHub](https://img.shields.io/github/forks/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/network)
+[![GitHub](https://img.shields.io/github/issues/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/issues)
+[![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
-## Project Structure
- - `index.js`: The main entry point of the application.
- - `config.js`: Contains configuration files for the application.
- - `authorization`
-   - `controllers`: Controller files for authentication endpoints.
-   - `schemas`: JSON Schemas against which the body of various routes will be validated.
-   - `routes.js`: Registers all the authentication routes.
- - `products`
-   - `controllers`: Controller files for product master CRUD endpoints.
-   - `schemas`: JSON Schemas against which the body of various routes will be validated.
-   - `routes.js`: Registers all the product CRUD routes.
- - `users`
-   - `controllers`: Controller files for user master CRUD endpoints.
-   - `schemas`: JSON Schemas against which the body of various routes will be validated.
-   - `routes.js`: Registers all the user CRUD routes.
- - `common`
-   - `middlewares`: Various middlewares that can be used in various routes like (isAuthenticated, CheckPermissions etc.)
-   - `models`: Sequelise models for the Product and User Tables
- - `storage`: Local storage, that stores all the SQLite tables.
-
-## Prerequisites
-Before running the application, make sure you have the following installed:
-1. NodeJS (v18)
-2. NPM (v9)
+Custom, authenticated API instructions and starter pack for BEW 1.3 students!
 
 ## Installation
-1. Clone the repository: `git clone https://github.com/arvindkalra08/e-commerce`
-2. Navigate to the project directory: `cd e-commerce-service`
-3. Install the dependencies: `npm install`
 
-## Usage
+1. Fork this repository and clone your fork locally.
+1. Open the repository folder in your editor of choice:
 
-To start the service, run the following command:
-```shell
-npm start
-```
+    ```bash
+    $ cd auth-api-starterpack
+    $ atom .
+    ```
 
-## License
-This project is licensed under the MIT License.
+1. Run `npm install` to install project dependencies into the activated environment.
+1. Execute `npm start` to run the development server.
 
+## Development
 
+### `#TODO` === Hint
 
+* I've added **helpful `#TODO` placeholders, comments, and hints throughout the project** to jog your memory in case you need a hand! Simply `CTRL` + `Shift` + `F` to Find All in your editor, and **search for `#TODO`.** You'll find a helpful list of hints waiting for you!
 
+## Deployment
+
+### Heroku
+
+Follow this [Node.js Deployment Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs) to deploy your application on Heroku. Be sure to complete all of the steps!
+
+## [BEW 1.3] Project Requirements
+
+* View the [**requirements document**](https://github.com/Product-College-Courses/BEW-1.2-Authentication-and-Associations/blob/master/Projects/02-Custom-API-Project.md) in the [Class Repository](https://github.com/Product-College-Courses/BEW-1.2-Authentication-and-Associations).
