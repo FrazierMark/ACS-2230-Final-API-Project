@@ -1,7 +1,5 @@
-# 🔐 auth-api-starterpack
+# AUTH - API - Ecommerce
 
-[![GitHub](https://img.shields.io/github/forks/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/network)
-[![GitHub](https://img.shields.io/github/issues/droxey/auth-api-starterpack.svg?style=flat-square)](https://github.com/droxey/auth-api-starterpack/issues)
 [![The MIT License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 
 Custom, authenticated API instructions and starter pack for BEW 1.3 students!
@@ -19,18 +17,23 @@ Custom, authenticated API instructions and starter pack for BEW 1.3 students!
 1. Run `npm install` to install project dependencies into the activated environment.
 1. Execute `npm start` to run the development server.
 
-## Development
 
-### `#TODO` === Hint
+## Routes
 
-* I've added **helpful `#TODO` placeholders, comments, and hints throughout the project** to jog your memory in case you need a hand! Simply `CTRL` + `Shift` + `F` to Find All in your editor, and **search for `#TODO`.** You'll find a helpful list of hints waiting for you!
+| Route | Description |
+| --- | --- |
+| POST /signup | Creates a new user and generates a JWT token. |
+| POST /login | Authenticates user and generates a JWT token. |
 
-## Deployment
+| GET /user | Retrieves the currently signed-in user. |
+| GET /user/all | Retrieves all users in the database. (Must be admin) |
+| PATCH /user | Updates a specific user's data. |
+| PATCH /user/change-role/:userId | Updates a specific user's role. (Must be admin) |
+| DELETE /user/:userId | Deletes a specific user. (Must be admin) |
 
-### Heroku
+| GET /product | Retrieves all products in the database. |
+| GET /product/:productId | Retrieves all details of a specific product. | 
+| POST /product | Creates a new product. (Must be admin) | 
+| PATCH /product/:productId | Updates details of a specific product. (Must be admin) |
+| DELETE /product/:productId | Deletes a specific product. (Must be admin) |
 
-Follow this [Node.js Deployment Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs) to deploy your application on Heroku. Be sure to complete all of the steps!
-
-## [BEW 1.3] Project Requirements
-
-* View the [**requirements document**](https://github.com/Product-College-Courses/BEW-1.2-Authentication-and-Associations/blob/master/Projects/02-Custom-API-Project.md) in the [Class Repository](https://github.com/Product-College-Courses/BEW-1.2-Authentication-and-Associations).
